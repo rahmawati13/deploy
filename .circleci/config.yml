@@ -1,4 +1,4 @@
-working_dir: &working_dir ~/app
+vworking_dir: &working_dir ~/app
 
 .build_template: &build_definition
   steps:
@@ -11,7 +11,7 @@ working_dir: &working_dir ~/app
     - run: bundle exec rake rubocop
     - run: chmod +x ./deploy.sh
     - run: ./deploy.sh
-
+      
 version: 2.0
 
 jobs:
